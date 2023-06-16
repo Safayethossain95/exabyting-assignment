@@ -1,0 +1,281 @@
+@import './mixins';
+@import './varibles';
+
+.commonbutton{
+    button{
+        padding:20px 32px;
+        @include myfont(18px,600,$main_font);
+        background-color: #fff;
+        border:1px solid #181F1B;
+        border-radius: 10px;
+        @include media(lgDevice){
+            padding: 8px 17px;
+            @include myfont(13px,600,$main_font);
+        }
+        &.active{
+            background-color: $main_button_color;
+            border:0;
+            color:#fff;
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 14px;
+            }
+        }
+        
+    }
+}
+.myBigContainer{
+        
+    width:1680px;
+    margin:0 auto;
+    @include media(lgDevice){
+        width: 800px;
+        margin:0 auto;
+    }
+}
+.commontable{
+    box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+    @include media(lgDevice){
+        overflow-x: scroll;
+    }
+    @include media(xlgDevice){
+        overflow-x: scroll;
+    }
+    thead{
+        tr{
+            th{
+                    &:first-child{
+
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                }
+            }
+            th{
+                    &:last-child{
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+            }
+        }
+    }
+    tr{
+        height: 70px;
+        th{
+            background: #E3E3E3;
+            text-align: center;
+            @include myfont(18px,600,$second_font);
+
+        }
+    }
+    tbody{
+        tr{
+            td{
+                background-color: #B4ECD2;
+                border-radius: 6px;
+                border:2px solid #fff;
+                padding:24px 41px;
+                @include myfont(18px,400,$second_font);
+                text-align: center;
+            }
+        }
+    }
+}
+.commontable2{
+    @include media(lgDevice){
+        overflow-x: scroll;
+    }
+    @include media(xlgDevice){
+        overflow-x: scroll;
+    }
+    
+    box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+    thead{
+        tr{
+            th{
+                    &:first-child{
+
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                }
+            }
+            th{
+                    &:last-child{
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+            }
+        }
+    }
+    tr{
+        height: 60px;
+        th{
+            background: #BBE5C9;
+            text-align: center;
+            @include myfont(18px,600,$second_font);
+
+        }
+    }
+    tbody{
+        tr{
+           
+            td{
+                background-color: #E3E3E3;
+                height: 60px;
+                border-radius: 6px;
+                border:2px solid #fff;
+                
+                @include myfont(18px,400,$second_font);
+                text-align: center;
+            }
+        }
+    }
+}
+
+.subheading{
+    h2{
+        @include myfont(51px,500,$second_font);
+        @include media(lgDevice){
+            font-size: 27px;
+        }
+        margin-bottom: 60px;
+        span{
+            @include myfont(51px,700,$second_font);
+        }
+    }
+}
+
+.smallboxi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 55px;
+    width: 141px;
+    height: 141px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+    p{
+        margin-bottom: 0;
+        @include myfont(14px,400,$second_font);
+        margin-top: 10px;
+    }
+}
+.mediumboxi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    margin-bottom: 26px;
+    width: 194px;
+    height: 194px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+}
+.paragraph{
+    p{
+        @include myfont(24px,400,$second_font);
+        color:$faded_font_color;
+        @include media(lgDevice){
+            @include myfont(17px,400,$second_font);
+
+        }
+    }
+}
+.testibox{
+    padding:48px 62px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* Drop Shadow */
+    transition:0.4s;
+    &:hover{
+        box-shadow: 12px 12px 20px rgba(164, 198, 163, 0.5), -9px -9px 16px rgba(255, 255, 255, 0.6);
+    }
+
+    box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+    .img{
+        margin-bottom: 60px;
+    }
+    .text{
+        h3{
+            @include myfont(22px,600,$second_font);
+            margin-bottom: 10px;
+        }
+        p{
+            @include myfont(18px,400,$second_font);
+            color:#0A0A0AD9;
+        }
+    }
+}
+.barbox{
+    padding:20px;
+    background: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* Drop Shadow */
+
+    box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+    border-radius: 20px;
+    width: 510px;
+    height: 72px;
+    margin-bottom: 18px;
+    @include media(lgDevice){
+        width: 341px;
+    }
+    img{
+        margin-right: 13px;
+    }
+    p{
+        margin-bottom: 0;
+        @include myfont(22px,500,$second_font);
+    }
+}
+
+.tablename{
+    @include myfont(20px,600,$second_font);
+}
+.footercomp{
+    padding-top:100px;
+    padding-bottom: 70px;
+    height: 396px;
+    width: 100%;
+    background-color: #c9c9c9;
+}
+.footerlist{
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        li{
+            margin-bottom: 11px;
+            a{
+                @include myfont(18px,400,$second_font);
+                color:#000;
+                text-decoration: none;
+                @include media(lgDevice){
+                    @include myfont(14px,400,$second_font);
+                }
+
+            }
+        }
+    }
+}
+
+.subheadingfooter{
+    h2{
+        @include myfont(24px,600,$second_font);
+        margin-top: 28px;
+        @include media(lgDevice){
+            
+            @include myfont(11px,600,$second_font);
+
+        }
+    }
+    p{
+        margin-top: 30px;
+        @include myfont(15px,300,$second_font);
+        @include media(lgDevice){
+            @include myfont(11px,300,$second_font);
+
+        }
+    }
+}

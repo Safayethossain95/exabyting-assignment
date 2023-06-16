@@ -1,0 +1,200 @@
+@import './CommonSass/varibles';
+@import './CommonSass/mixins';
+@import './CommonSass/common';
+*{
+    padding:0;
+    margin:0;
+}
+.heading{
+    font-size: 40px;
+    font-weight: 700;
+    color:red
+}
+.navbar{
+    background-color: #fff;
+    height:92px;
+    border-bottom: 1px solid #f3f3f3;
+    @include myfont(18px,600,$main_font);
+    @include media(lgDevice){
+        @include myfont(14px,600,$main_font);
+    }
+    a{
+        margin:0 20px;
+       @include media(lgDevice){
+        margin:0 11px;
+        padding:0!important;
+       }
+    }
+    .navbar-nav{
+        margin-left: 100px;
+        @include media(lgDevice){
+            margin-left: 0;
+        }
+    }
+    .nav-link{
+        &.active{
+            color: $main_font_color;
+        }
+    }
+    .nav-item{
+       
+        &.active{
+            a{
+                color: $main_font_color;
+            }
+        }
+    }
+}
+.bannermain{
+    position: relative;
+    .overlay{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        
+        .content{
+            margin-top: 120px;
+            h1{
+                @include myfont(126px,400,$second_font);
+                color:$blacklike;
+                @include media(lgDevice){
+                    @include myfont(60px,400,$second_font);
+
+                }
+                span{
+                    @include myfont(126px,800,$second_font);
+                    color:$blacklike;
+                    @include media(lgDevice){
+                    @include myfont(60px,800,$second_font);
+
+                }
+                }
+            }
+           
+        }
+    }
+}
+.adreportcomp{
+    padding-top: 100px;
+  
+    
+}
+.socialiconsmain{
+    padding-top: 110px;
+    .button{
+        button{
+            margin-top: 45px;
+        }
+    }
+}
+.trycomp{
+    padding-top: 170px;
+}
+.chartpartmain{
+    padding-top: 170px;
+    .chartpartheader{
+        width: 871px;
+        text-align: center;
+    }
+    .wrapperchart{
+        display: flex;
+        .mainchart {
+            position: relative;
+            width: 80%; /* Adjust the width as needed */
+            // padding-bottom: 100%; /* Set the same value as width for 1:1 aspect ratio */
+          }
+          .numbersfloat{
+            width: 20%;
+            p{
+                @include myfont(36px,700,$second_font);
+                color:$sitegreen;
+                margin-bottom: 0;
+                margin-top: -10px;
+            }
+            .sm{
+                @include myfont(16px,700,$second_font);
+                color:#181F1B;
+            }
+            .secondnumber{
+                p{
+                    @include myfont(36px,700,$second_font);
+                    color:#FFC907;
+                    margin-bottom: 0;
+                    &.yellow{
+                        margin-top: 87px;
+                    }
+                }
+                .sm{
+                    @include myfont(16px,700,$second_font);
+                    color:#181F1B;
+                }
+            }
+          }
+    }
+}
+.firsttouch{
+    padding-top: 165px;
+    .circle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 190px;
+        height: 190px;
+        background: #FFFFFF;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        /* Drop Shadow */
+        
+        box-shadow: 10px 10px 17px rgba(193, 208, 195, 0.26), -9px -9px 16px rgba(238, 238, 238, 0.6);
+        border-radius: 50%;
+        h3{
+            @include myfont(83px,400,$second_font);
+            color:#181F1B;
+            margin-bottom: 0;
+            line-height: 0.9;
+        }
+        p{
+            @include myfont(26px,400,$second_font);
+            color:#181F1B;
+            line-height: 1;
+            text-align: center;
+        }
+    }
+}
+.socialtwomain{
+    padding-top: 165px;
+    .subheading,.paragraph{
+        width: 65%;
+        margin:0 auto;
+    }
+    .paragraph{
+        width: 50%;
+        margin:0 auto;
+        text-align: center;
+    }
+
+    .socialtwowrapper{
+        padding-top: 50px;
+        width: 440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+}
+.report2table{
+    padding-top: 40px;
+}
+.applypartcomp{
+    padding: 140px 0;
+}
+.footercomp{
+
+    h5{
+        @include myfont(18px,600,$second_font);
+        margin-bottom: 22px;
+    }
+    .fcontent{
+        padding-left: 100px;
+    }
+}
+
